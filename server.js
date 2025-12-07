@@ -16,7 +16,7 @@ app.get("/", (req, res) => {
 
 
 app.get("/pictures/defaultpfp", (req, res) => {
-  res.sendFile(path.join(__dirname, "public/img", "barbosapfp1.png"));
+  res.sendFile(path.join(__dirname, "public/img", "barbosapfp2.png"));
 });
 
 app.get("/pictures/file-organizer", (req, res) => {
@@ -33,6 +33,10 @@ app.get("/pictures/tiktok", (req, res) => {
 
 app.get("/pictures/github", (req, res) => {
   res.sendFile(path.join(__dirname, "public/img", "github.png"));
+});
+
+app.get("/ping", (req, res) => {
+    res.send("OK");
 });
 
 app.use((req, res) => {
