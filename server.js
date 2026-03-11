@@ -15,9 +15,6 @@ app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "public/profile", "index.html"));
 });
 
-app.get("/youtubeconversor", (req, res) => {
-  res.sendFile(path.join(__dirname, "public/ytmp3", "index.html"));
-});
 
 app.get("/pictures/defaultpfp", (req, res) => {
   res.sendFile(path.join(__dirname, "public/img", "barbosapfp2.png"));
@@ -55,51 +52,14 @@ app.get("/pictures/clipmanager4", (req, res) => {
   res.sendFile(path.join(__dirname, "public/img", "clipManager4.png"));
 });
 
+app.get("/pictures/skins/skindemacho", (req, res) => {
+  res.sendFile(path.join(__dirname, "public/img", "cat-maid_skin.png"));
+});
+
 
 app.get("/ping", (req, res) => {
     res.send("OK");
 });
-
-app.get("/download", async (req, res) => {
-    try {
-        let url = req.query.url;
-
-        if (!url) {
-            return res.status(400).json({ error: "URL ausente." });
-        }
-
-        const cleanURL = url.split("&list=")[0].split("?list=")[0];
-
-        const sanitizedURL = cleanURL.split("&index=")[0];
-
-        const onlyVideoParam = (() => {
-            const base = new URL(cleanURL);
-            const id = base.searchParams.get("v");
-            return id ? `https://www.youtube.com/watch?v=${id}` : cleanURL;
-        })();
-
-        const finalURL = onlyVideoParam;
-
-        if (!ytdl.validateURL(finalURL)) {
-            return res.status(400).json({ error: "URL inválida." });
-        }
-
-        const info = await ytdl.getInfo(finalURL);
-        const title = info.videoDetails.title.replace(/[^\w\s]/gi, '');
-
-        res.header("Content-Disposition", `attachment; filename="${title}.mp3"`);
-
-        ytdl(finalURL, {
-            filter: "audioonly",
-            quality: "highestaudio"
-        }).pipe(res);
-
-    } catch (error) {
-        console.error(error);
-        res.status(500).json({ error: "Erro ao processar o download." });
-    }
-});
-
 
 app.use((req, res) => {
     res.redirect("/");
