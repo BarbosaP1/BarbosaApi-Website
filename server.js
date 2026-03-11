@@ -52,7 +52,7 @@ app.get("/pictures/clipmanager4", (req, res) => {
   res.sendFile(path.join(__dirname, "public/img", "clipManager4.png"));
 });
 
-app.get("/pictures/skins/skindemacho", (req, res) => {
+app.get("/pictures/skin/cat-maid", (req, res) => {
   res.sendFile(path.join(__dirname, "public/img", "cat-maid_skin.png"));
 });
 
