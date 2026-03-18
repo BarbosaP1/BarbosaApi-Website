@@ -1,0 +1,240 @@
+/* style.css */
+
+/* Variáveis de Cores */
+:root {
+    --bg-color: #0F172A;
+    --text-color: #E2E8F0;
+    --primary-color: #3B82F6;
+    --secondary-color: #64748B;
+    --accent-color: #22D3EE;
+}
+
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Links e Tipografia */
+a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: var(--accent-color);
+}
+
+.text-primary { color: var(--primary-color); }
+.text-secondary { color: var(--secondary-color); }
+.text-accent { color: var(--accent-color); }
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: rgba(15, 23, 42, 0.95);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid var(--secondary-color);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.header nav a {
+    margin-left: 20px;
+    padding: 8px 15px;
+}
+
+/* Botões */
+.btn-primary, .btn-secondary {
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s, color 0.3s;
+    display: inline-block;
+    cursor: pointer;
+    border: none;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+}
+
+.btn-primary:hover {
+    background-color: #5B9BF6; 
+    color: var(--bg-color);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--text-color);
+    border: 1px solid var(--secondary-color);
+}
+
+.btn-secondary:hover {
+    background-color: var(--secondary-color);
+    color: var(--bg-color);
+}
+
+/* Seções Gerais */
+.section {
+    padding: 100px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.lead-text {
+    color: var(--secondary-color);
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+/* Grid de Cards (Passos e Vantagens) */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    background-color: #1A2437;
+    border-radius: 8px;
+    padding: 20px;
+    border: 1px solid #1E293B;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.project-card i {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.project-card h3 {
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 80px 5% 40px;
+    border-top: 1px solid var(--secondary-color);
+}
+
+.footer h3 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.copyright {
+    margin-top: 40px;
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+}
+
+/* --- Estilos Específicos do Conversor --- */
+
+/* Hero Section Centralizado */
+.hero-centered {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 120px 5% 80px;
+    text-align: center;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.hero-title span {
+    color: var(--primary-color);
+}
+
+/* Barra de Input */
+.converter-box {
+    display: flex;
+    width: 100%;
+    max-width: 700px;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.input-url {
+    flex-grow: 1;
+    padding: 15px 20px;
+    border-radius: 5px;
+    border: 1px solid var(--secondary-color);
+    background-color: #1E293B;
+    color: var(--text-color);
+    font-size: 1.1rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.input-url:focus {
+    border-color: var(--primary-color);
+}
+
+.input-url::placeholder {
+    color: var(--secondary-color);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .section h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .converter-box {
+        flex-direction: column;
+    }
+    .hero-title {
+        font-size: 2.5rem;
+    }
+}

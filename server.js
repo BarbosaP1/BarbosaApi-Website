@@ -36,6 +36,10 @@ app.get("/pictures/github", (req, res) => {
   res.sendFile(path.join(__dirname, "public/img", "github.png"));
 });
 
+app.get("/pictures/clip-manager", (req, res) => {
+  res.sendFile(path.join(__dirname, "public/img", "clip-manager.png"));
+});
+
 app.get("/pictures/clipmanager1", (req, res) => {
   res.sendFile(path.join(__dirname, "public/img", "clipManager1.png"));
 });
