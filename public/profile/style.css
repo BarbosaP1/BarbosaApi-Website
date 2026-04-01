@@ -453,3 +453,75 @@ body {
     filter: brightness(1.2);
     transform: translateY(-2px);
 }
+/* ── Minecraft Banner ── */
+.mc-banner {
+    max-width: 1200px;
+    margin: 0 auto 60px;
+    padding: 0 5%;
+}
+
+.mc-banner-inner {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: rgba(124, 58, 237, 0.08);
+    border: 1px solid rgba(124, 58, 237, 0.3);
+    border-radius: 20px;
+    padding: 24px 32px;
+    backdrop-filter: blur(12px);
+    flex-wrap: wrap;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.mc-banner-inner:hover {
+    border-color: rgba(124, 58, 237, 0.6);
+    box-shadow: 0 0 30px rgba(124, 58, 237, 0.15);
+}
+
+.mc-icon {
+    font-size: 2.2rem;
+    flex-shrink: 0;
+}
+
+.mc-text {
+    flex: 1;
+    min-width: 160px;
+}
+
+.mc-text h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #F8FAFC;
+    margin-bottom: 2px;
+}
+
+.mc-text p {
+    font-size: 0.85rem;
+    color: #64748B;
+}
+
+.btn-mc {
+    padding: 10px 22px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    background: linear-gradient(135deg, #7C3AED, #5B21B6);
+    color: #fff;
+    border: none;
+    box-shadow: 0 4px 15px rgba(124, 58, 237, 0.35);
+    transition: filter 0.3s, transform 0.2s;
+    white-space: nowrap;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-mc:hover {
+    filter: brightness(1.2);
+    transform: translateY(-2px);
+    color: #fff;
+}
+
+@media (max-width: 600px) {
+    .mc-banner-inner { flex-direction: column; text-align: center; }
+    .mc-text { min-width: unset; }
+}
