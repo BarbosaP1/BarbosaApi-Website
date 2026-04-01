@@ -15,6 +15,9 @@ app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "public/profile", "index.html"));
 });
 
+app.get(["/campus", "/minecraft", "/servidor"], (req, res) => {
+  res.sendFile(path.join(__dirname, "public/campus", "index.html"));
+});
 
 app.get("/pictures/defaultpfp", (req, res) => {
   res.sendFile(path.join(__dirname, "public/img", "barbosapfp2.png"));
@@ -58,6 +61,14 @@ app.get("/pictures/clipmanager4", (req, res) => {
 
 app.get("/pictures/skin/cat-maid", (req, res) => {
   res.sendFile(path.join(__dirname, "public/img", "cat-maid_skin.png"));
+});
+
+app.get("/pictures/campusicon", (req, res) => {
+  res.sendFile(path.join(__dirname, "public/img", "campusicon.png"));
+});
+
+app.get("/fonts/minecraft.ttf", (req, res) => {
+  res.sendFile(path.join(__dirname, "public/fonts", "minecraft.ttf"));
 });
 
 

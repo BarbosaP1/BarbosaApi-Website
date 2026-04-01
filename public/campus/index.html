@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Server Status – Campus</title>
+    <link rel="icon" type="image/png" href="/pictures/campusicon">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="blob-cont">
+    <div class="blob blue"></div>
+    <div class="blob cyan"></div>
+    <div class="blob purple"></div>
+</div>
+
+<header class="header">
+    <div class="logo"><span style="color:var(--accent-color)"></span>Campus</div>
+    <nav>
+        <a href="/">Sobre</a>
+        <a href="/#projetos">Projetos</a>
+        <a href="/#habilidades">Habilidades</a>
+        <a href="/#contato" class="btn-primary">Contato</a>
+    </nav>
+</header>
+
+<main class="main">
+    <div class="hero reveal">
+        <div class="badge"><span class="badge-dot"></span> Minecraft Server</div>
+        <h1>Status do Servidor</h1>
+        <p>Confira quem está online e o estado atual do servidor em tempo real.</p>
+    </div>
+
+    <div id="status-card" class="status-card reveal">
+        <!-- filled by JS -->
+        <div style="height:200px" class="skeleton"></div>
+    </div>
+
+    <div id="players-card" class="players-card reveal" style="display:none">
+        <!-- filled by JS -->
+    </div>
+
+    <div class="refresh-row reveal">
+        <span class="last-updated" id="last-updated">Aguardando dados...</span>
+        <button class="btn-refresh" id="refresh-btn" onclick="fetchStatus()">
+            <svg id="refresh-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="23 4 23 10 17 10"/>
+                <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/>
+            </svg>
+            Atualizar
+        </button>
+    </div>
+</main>
+
+<footer class="footer">
+    <p>Dados via <a href="https://mcsrvstat.us" target="_blank">mcsrvstat.us</a> · Feito por Barbosa</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
