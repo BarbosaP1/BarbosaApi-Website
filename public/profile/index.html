@@ -3,119 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio – Barbosa</title>
+    <title>BarbosaP1</title>
     <link rel="stylesheet" href="profile/style.css">
     <link rel="icon" type="image/png" href="/img/favicon.png">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="blob-cont">
+        <div class="blob blue"></div>
+        <div class="blob cyan"></div>
+    </div>
 
     <header class="header">
         <div class="logo">
-            <span class="text-accent"></span>Portifólio de Barbosa<span class="text-accent"></span>
+            <span class="text-accent"></span>Barbosa
         </div>
         <nav>
             <a href="#sobre">Sobre</a>
             <a href="#projetos">Projetos</a>
             <a href="#habilidades">Habilidades</a>
-            <a href="https://github.com/BarbosaP1">Github</a>
             <a href="#contato" class="btn-primary">Contato</a>
         </nav>
     </header>
 
     <main>
-        <section id="profile" class="profile-section">
+        <section id="profile" class="profile-section reveal">
             <div class="profile-content">
-                <p class="text-secondary">Olá, meu nome é</p>
+                <p class="badge">Disponível para Projetos</p>
                 <h1>Barbosa</h1>
-                <h2 class="text-accent">Programador C# • Desenvolvedor de Programas .NET</h2>
+                <h2 class="gradient-text">C# Programmer & Reverse Engineer</h2>
                 <p class="lead-text">
-                    Sou um desenvolvedor apaixonado por entender como as coisas funcionam por trás das cenas. 
-                    Fazia conteúdo de gaming no youtube e faço vídeos curtos da série <em>Rick And Morty</em> no tiktok.
+                    Sou um desenvolvedor apaixonado por entender como as coisas funcionam por trás das cenas. Fazia conteúdo de gaming no youtube e faço vídeos curtos da série Rick And Morty no tiktok.
                 </p>
                 <div class="profile-actions">
                     <a href="#projetos" class="btn-primary">Ver Projetos</a>
-                    <a href="#contato" class="btn-secondary">Entre em Contato</a>
+                    <a href="https://github.com/BarbosaP1" class="btn-secondary">GitHub</a>
                 </div>
             </div>
-            <div class="profile-image">
-                <img src="https://barbosaapi.onrender.com/pictures/defaultpfp"/>
+            <div class="profile-image-container">
+                <div class="image-glow"></div> <div class="img-wrapper">      
+                <img src="https://barbosaapi.onrender.com/pictures/defaultpfp" alt="Barbosa"/>
+                </div>
             </div>
         </section>
 
         <section id="projetos" class="section projects-section">
-            <h2><span class="text-primary">Projetos</span> Recentes</h2>
+            <h2 class="reveal"><span class="text-primary">Projetos</span> Em Destaque</h2>
             <div class="projects-grid">
-
-                <div class="project-card">
-                    <div class="project-image-placeholder"><img src="http://localhost:3000/pictures/file-organizer"/></div>
-                    <h3>Organizador de Arquivos</h3>
-                    <p class="text-secondary">
-                        Tem o propósito de organizar automaticamente arquivos em pastas específicas com base em suas extensões.
-                    </p>
-                    <a href="https://github.com/BarbosaP1/file-organizer" class="text-accent">Página do Github &rarr;</a>
+                <div class="project-card reveal">
+                    <div class="glass-inner">
+                        <div class="project-img-wrapper">
+                            <img src="https://barbosaapi.onrender.com/pictures/file-organizer" alt="File Organizer">
+                        </div>
+                        <h3>Organizador de Arquivos</h3>
+                        <p>Automação inteligente de sistemas de arquivos via extensões.</p>
+                        <div class="card-footer">
+                            <span class="tag">C#</span>
+                            <a href="https://github.com/BarbosaP1/file-organizer" class="link-icon">↗</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="project-card">
-                    <div class="project-image-placeholder"><img src="http://localhost:3000/pictures/clip-manager"/></div>
-                    <h3>Organizador de Clipes</h3>
-                    <p class="text-secondary">
-                        Organiza clipes da série Rick e Morty por nome, episódio, personagens e duração.
-                    </p>
-                    <a href="https://github.com/BarbosaP1/Clip-Manager" class="text-accent">Página do Github &rarr;</a>
+                <div class="project-card reveal">
+                    <div class="glass-inner">
+                        <div class="project-img-wrapper">
+                            <img src="https://barbosaapi.onrender.com/pictures/clip-manager" alt="Clip Manager">
+                        </div>
+                        <h3>Clip Manager</h3>
+                        <p>Gerenciamento de clipes para criadores de conteúdo de Rick & Morty.</p>
+                        <div class="card-footer">
+                            <span class="tag">.NET</span>
+                            <a href="https://github.com/BarbosaP1/Clip-Manager" class="link-icon">↗</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-
-        <section id="socials" class="section socials-section">
-    <h2><span class="text-primary">Minhas</span> Redes Sociais</h2>
-
-    <div class="socials-grid">
-        <a href="https://www.youtube.com/@BarbosaYT_" target="_blank" class="social-card">
-            <img src="https://barbosaapi.onrender.com/pictures/youtube" alt="YouTube">
-        </a>
-
-        <a href="https://www.tiktok.com/@barbosayt" target="_blank" class="social-card">
-            <img src="https://barbosaapi.onrender.com/pictures/tiktok" alt="TikTok">
-        </a>
-
-        <a href="https://github.com/BarbosaP1" target="_blank" class="social-card">
-            <img src="https://barbosaapi.onrender.com/pictures/github" alt="GitHub">
-        </a>
-    </div>
-    </section>
-
-        <section id="habilidades" class="section skills-section">
-            <h2><span class="text-primary">Minhas</span> Habilidades</h2>
-            <div class="skills-grid">
-                <span class="skill-tag">C#</span>
-                <span class="skill-tag">JavaScript (Básico)</span>
-                <span class="skill-tag">C++ (Básico)</span>
-                <span class="skill-tag">Harmony Patching</span>
-                <span class="skill-tag">Engenharia Reversa</span>
-                <span class="skill-tag">Hacking de Jogos</span>
-                <span class="skill-tag">Inglês Avançado</span>
-                <span class="skill-tag">Edição de Vídeo</span>
+        <section id="habilidades" class="section reveal">
+            <h2>Habilidades <span class="text-accent">&</span> Tech</h2>
+            <div class="skills-container">
+                <div class="skill-pill">C#</div>
+                <div class="skill-pill">.NET Core</div>
+                <div class="skill-pill">JavaScript</div>
+                <div class="skill-pill">Bukkit (Minecraft)</div>
+                <div class="skill-pill">Bots de Discord</div>
+                <div class="skill-pill">Inglês Intermediário</div>
+                <div class="skill-pill">Reverse Engineering</div>
+                <div class="skill-pill">Harmony Patching</div>
             </div>
         </section>
-
-        
     </main>
 
-    <footer id="contato" class="footer">
-        <h3>Quer trocar uma ideia?</h3>
-        <p class="lead-text">Estou aberto a projetos, colaborações e novas oportunidades.</p>
-        <a href="mailto:barbosap1.contato@gmail.com" class="btn-primary large-btn">Enviar e-mail</a>
-
-        <div class="social-links">
-            <a href="https://www.youtube.com/@BarbosaYT_" class="text-secondary">YouTube (BarbosaYT)</a>
-            <span class="text-secondary">|</span>
-            <a href="https://www.tiktok.com/@barbosayt" class="text-secondary">Tiktok</a>
-            <span class="text-secondary">|</span>
-            <a href="https://github.com/BarbosaP1" class="text-secondary">GitHub</a>
+    <footer id="contato" class="footer reveal">
+        <div class="glass-card">
+            <h3>Vamos construir algo juntos?</h3>
+            <a href="mailto:barbosap1.contato@gmail.com" class="btn-primary large-btn">Mandar E-mail</a>
+            <div class="social-links">
+                <a href="https://github.com/BarbosaP1">GitHub</a>
+                <a href="https://tiktok.com/@barbosayt">TikTok</a>
+            </div>
         </div>
-
-        <p class="copyright">&copy; 2025 Barbosa. Todos os direitos reservados.</p>
     </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+    </script>
 </body>
 </html>
