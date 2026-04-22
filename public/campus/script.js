@@ -1,5 +1,5 @@
 // ─── CONFIG ────────────────────────────────────────────────────────────────
-const SERVER_ADDRESS = '177.107.116.21:25565'; // ← troque pelo IP/domínio do seu servidor
+const SERVER_ADDRESS = '177.107.120.123:25565'; // ← troque pelo IP/domínio do seu servidor
 const AUTO_REFRESH_MS = 60_000;            // atualiza a cada 60s
 
 // ─── State ─────────────────────────────────────────────────────────────────
